@@ -1,0 +1,20 @@
+{
+	"manifest_version" : 2,
+	"name" : "HelloShortcutKey",
+	"description" : "Extension to demonstrate a Shortcut-Key as an input component",
+	"version" : "1.2",
+	"browser_action" : {
+		"default_title" : "HelloShortcutKey",
+		"default_icon" : "icon-1.png"
+	},
+	"background" : {
+		"scripts" : ["event_script.js","another_event_script.js"],
+		"persistent" : true
+	},
+	"commands" : {
+		"shortcut-key to change the extension icon" : {
+			"suggested_key" : {"default" : "Alt+9"},
+			"description" : "Change the extension icon"
+		}
+	}
+}

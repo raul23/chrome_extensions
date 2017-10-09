@@ -4,6 +4,7 @@
 - bundled app
 - access to browser features, e.g. bookmarks, history, search
 - implemented with web technologies: HTML, CSS, JavaScript
+- don't heavily rely on inputs
 
 # Chapter 1-Introduction to Google Chrome Extensions
 
