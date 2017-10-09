@@ -63,7 +63,7 @@ can only listen to some events.
 **NOTE:** extensions can also be created without any input components, e.g. **Themes**
 which only use a manifest.json file + images.
 
-###The Browser-Action and Page-Action Components
+### The Browser-Action and Page-Action Components
 **Browser-Action** component: 
   - Associated with any page
   - Located right of the address bar  
@@ -72,7 +72,9 @@ which only use a manifest.json file + images.
 
 **Page-Action** component: 
   - Associated with specific pages
-  - Located inside the address bar  
+  - Located inside the address bar
+    - As of October 9 2017, Page-Action components are located right of the address bar
+    just like Browser-Action components 
   - To display it:
     - call `chrome.pageAction.show(tabId)`  
     OR
@@ -101,7 +103,7 @@ https://developer.chrome.com/extensions/tabs#type for complete list of
 }
 ```
 
-**Declaration and definition of Browser-Action in manifest:**
+**Declaration and definition of Page-Action in manifest:**
 ```json
 "page_action" : {
     "default_title" : "HelloPageAction",
@@ -370,3 +372,40 @@ the URLs defined in `matches`
   - `event_script.js` outputs to the **_generated_background_page.html**'s Dev tools console
   
 ## Examples of Components
+### BrowserActionNotes Extension
+[BrowserActionNotes](BrowserActionNotes): 
+- allows taking notes on ANY visited web pages
+  - only one note saved per URL
+  - note saving:
+  	- saved on local storage via `localStorage` API (from Standard JavaScript API)
+    - note overwritten or removed from local storage
+    - saved note is mapped to URL of active tab
+- Components used:
+  - **Browser-Action**
+  - **popup component** contains
+    - `<textArea>...</textArea>`: contains note
+    - two buttons: `<button>...</button>`
+  - **manifest component**: `tabs` permission to access tabs API  
+  - **popup script**:
+		- `getElementById()` used to get references to `textArea` and `button` elements
+		from JavaScript API
+		- `hardSave` and `removeNote` functions use tabs API to access currenly active tab
+			- `hardSave()` associated with `saveButton`
+			- `removeNote()` associated with `removeButton`
+			- `localStorage.setItem(activeURL,noteText)` to save note in local storage
+			- `localStorage.removeItem(activeURL)` to remove note from local storage
+- after DOM is loaded, `loadNoteForActiveURL()` gets called to display note
+on currently active tab in the `textArea` element
+- `logSuccess()` used for logging and for setting the Browser-Action badge text
+  - `browserAction.setBadgeText()` to set the badge text
+  - `browserAction.setBadgeBackgroundColor`  to set the badge color
+  
+### PageActionNotes Extension
+[PageActionNotes](PageActionNotes): 
+- allows taking only on specific pages (stackoverflow.com)
+- Components used: 
+  - **Page-Action component**
+  - **popup component**
+  - **popup script**
+  - **event script component**: registers to display Page-Action only on stackoverflow.com pages
+- `declarativeContent` API controls appearance of Page-Action 
