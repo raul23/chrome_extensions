@@ -9,7 +9,7 @@
 	},
 	"background" : {
 		"scripts" : ["event_script.js","another_event_script.js"],
-		"persistent" : true
+		"persistent" : false
 	},
 	"commands" : {
 		"shortcut-key to change the extension icon" : {

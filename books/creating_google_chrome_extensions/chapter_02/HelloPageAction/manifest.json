@@ -1,0 +1,18 @@
+{
+	"manifest_version" : 2,
+	"name" : "HelloPageAction",
+	"description" : "Extension to demonstrate a Page-Action",
+	"version" : "1.2",
+	"page_action" : {
+		"default_title" : "HelloPageAction",
+		"default_icon" : "icon.png",
+		"default_popup" : "popup.html"
+	},
+	"background" : {
+		"scripts" : ["event_script.js"],
+		"persistent" : false
+	},
+	"permissions" : [
+		"tabs"
+	]
+}

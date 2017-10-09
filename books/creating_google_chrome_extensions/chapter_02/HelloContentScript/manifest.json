@@ -1,0 +1,20 @@
+{
+	"manifest_version" : 2,
+	"name" : "HelloContentScript",
+	"description" : "Extension to demonstrate a content-script",
+	"version" : "1.2",
+	"content_scripts" : [
+		{
+			"matches" : ["*://stackoverflow.com/*"],
+			"js" : ["content_script.js"]
+		}
+	],
+	"background" : {
+		"scripts" : ["event_script.js"],
+		"persistent" : false
+	},
+	"permissions" : ["activeTab"],
+	"browser_action" : {
+		"default_icon" : "icon.png"
+	}
+}
