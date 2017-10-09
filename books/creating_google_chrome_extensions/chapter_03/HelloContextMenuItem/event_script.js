@@ -29,6 +29,7 @@ var createProperties = {
 	"id" : ID_CONTEXT_MENU_ITEM_HELLO,
 	"title" : "Custom search '%s'",
 	"contexts" : [TYPES_CONTEXT.ALL],
+	//"documentUrlPatterns" : [match_pattern_stackoverflow],
 	//Use "targetUrlPatterns" for TYPES_CONTEXT.IMAGE, TYPES_CONTEXT.VIDEO, TYPES_CONTEXT.AUDIO, etc.
 	"targetUrlPatterns" : []
 };
