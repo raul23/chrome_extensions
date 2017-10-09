@@ -1,0 +1,13 @@
+{
+	"manifest_version" : 2,
+	"name" : "API Demos: notifications API",
+	"description" : "Demonstrates use of the notifications API",
+	"version" : "1.2",
+	"background" : {
+		"scripts" : ["event_script.js"],
+		"persistent" : false
+	},
+	"permissions" : [
+		"notifications"
+	]
+}

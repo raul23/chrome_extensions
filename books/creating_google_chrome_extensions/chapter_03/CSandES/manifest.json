@@ -1,0 +1,16 @@
+{
+	"manifest_version" : 2,
+	"name" : "Communication Demo: content-script and event-script",
+	"description" : "Shows communication b/w content-script and event-script",
+	"version" : "1.2",
+	"background" : {
+		"scripts" : ["event_script.js"],
+		"persistent" : false
+	},
+	"content_scripts" : [
+		{
+			"matches" : ["*://localhost/*"],
+			"js" : ["content_script.js"]
+		}
+	]
+}

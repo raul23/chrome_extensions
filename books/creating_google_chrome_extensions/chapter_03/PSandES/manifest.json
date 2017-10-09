@@ -1,0 +1,15 @@
+{
+	"manifest_version" : 2,
+	"name" : "Communication Demo: popup-script and event-script",
+	"description" : "Shows communication b/w popup-script and event-script",
+	"version" : "1.2",
+	"browser_action" : {
+		"default_title" : "Communication Demo: popup-script and event-script",
+		"default_icon" : "icon.png",
+		"default_popup" : "popup.html"
+	},
+	"background" : {
+		"scripts" : ["event_script.js"],
+		"persistent" : false
+	}
+}

@@ -23,7 +23,7 @@ Chrome Extensions framework provides the following input components:
     - its features accessed via `chrome.pageAction` API
   - **Shortcut-Key**: 
     - its features accessed via `chrome.commands` API
-  - **Context-Menu-Item**
+  - **Context-Menu-Item**: creates items in the context menu
   - **Omnibox-Input**
 - **scripting component**: scripts with app logic. Three types of scripting
 components:

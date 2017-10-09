@@ -1,0 +1,13 @@
+{
+	"manifest_version" : 2,
+	"name" : "API Demos: alarms API",
+	"description" : "Demonstrates use of the alarms API",
+	"version" : "1.2",
+	"background" : {
+		"scripts" : ["event_script.js"],
+		"persistent" : false
+	},
+	"permissions" : [
+		"alarms"
+	]
+}

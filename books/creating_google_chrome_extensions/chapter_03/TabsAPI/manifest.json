@@ -1,0 +1,17 @@
+{
+	"manifest_version" : 2,
+	"name" : "API Demos: tabs API",
+	"description" : "Demonstrates use of the tabs API",
+	"version" : "1.2",
+	"background" : {
+		"scripts" : ["event_script.js"],
+		"persistent" : false
+	},
+	"browser_action" : {
+		"default_icon" : "icon.png"
+	},
+	"permissions" : [
+		"tabs",
+		"<all_urls>"
+	]
+}

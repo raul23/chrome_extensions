@@ -1,0 +1,17 @@
+{
+	"manifest_version" : 2,
+	"version" : "1.2",
+	"name" : "HelloOmniboxInput",
+	"description" : "Extension to demonstrate an Omnibox",
+	"background" : {
+		"scripts" : ["event_script.js"],
+		"persistent" : false
+	},
+	"omnibox" : {
+		"keyword" : "OI"
+	},
+	"icons" : {
+		"16" : "icon-16.png",
+		"128" : "icon-128.png"
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"manifest_version" : 2,
+	"name" : "Communication Demo: webpage-script and event-script",
+	"description" : "Shows communication b/w webpage-script and event-script",
+	"version" : "1.2",
+	"externally_connectable" : {
+		//Extension and app IDs. If this field is not specified, no
+		//extensions or apps can connect.
+		//"ids" : [], //To match all extensions and apps, specify only "*"
+		//Allowed webpages
+		"matches" : ["*://localhost/*"]
+	},
+	"background" : {
+		"scripts" : ["event_script.js"],
+		"persistent" : false
+	}
+}
+/*
+ * NOTE:
+ * If the "externally_connectable" attribute is not specified, and message
+ * is send from webpage to extension, the following error will be thrown
+ * (here, in 'webpage_script.js', via extensions::uncaught_exception_handler):
+ * "Error in event handler for (unknown): TypeError: Cannot read property 'message' of undefined"
+ */
