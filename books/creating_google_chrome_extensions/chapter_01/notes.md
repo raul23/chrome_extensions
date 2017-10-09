@@ -77,7 +77,7 @@ https://developer.chrome.com/extensions/api_other
 **Objective:** build simple extensions **ShowTime** that displays a popup when clicking the 
 Browser-Action button
 
-Go to [ShowTime](../code/chapter_01/ShowTime) for extension code.
+Go to [ShowTime](ShowTime/) for extension code.
 
 Files in **Showtime** folder
 - **manifest.json**: provides info about extension to Chrome browser
@@ -110,7 +110,7 @@ ShowTime extension makes use of standard JavaScript APIs:
 - **Date API**: gets current time and date
 - **DOM API**: accesses the DOM tree
 
-**TIP**: access the DOM after the has loaded. Call your function in the listener
+**TIP**: access the DOM after document has loaded. Call your function in the listener
 to the DOMContentLoaded event.
 
 **IMPORTANT**: Inlining of scripts is not allowed in popups. They should be
@@ -123,3 +123,28 @@ Steps to load extension in the browser:
 1. Enable the *Developer Mode* option
 1. Click on *Load Unpacked Extension*
 1. Select the extensions folder
+
+## Debugging an Extension
+
+Tool to debug Chrome extensions is **Chrome DevTools**, same used for debugging web
+pages on Chrome browser.
+
+Resource about **Chrome DevTools** is https://developers.google.com/web/tools/chrome-devtools/
+
+**Debugging methods with Chrome DevTools:**
+1. **Inspection**  
+  - right-click on extension icon and choose *Inspect Element*  
+  OR
+  - right-click directly on the extension and choose *Inspect*
+2. **Control panel**
+
+Panels useful for debugging extensions:
+- Elements panel: edit styles and DOM
+- Sources panel: debug JavaScript code
+- Resources panel: debugs other loaded resources, e.g. local and session storages
+  - **NOTE:** as of October 8 2017, the Resources panel is now called **Application** panel
+- Console panel: use `console.log` in your code to log data on the console and
+`console.clear` to clear the console log
+
+## Distributing on Store
+TODO: section to complete
