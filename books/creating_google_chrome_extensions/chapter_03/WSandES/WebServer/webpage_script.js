@@ -1,6 +1,6 @@
 //region {variables and functions}
 //Note this from the extensions page
-var extensionID = "lconbphjmfkpdopdnadkdfiiflajajgg";
+var extensionID = "mpiepldoiinmfgpnpjkgagjlbnebkfll";
 var sendMessageButtonID = "send_message";
 var greeting = "Hello World!";
 var message = "Test message X";

@@ -320,13 +320,13 @@ Use content scripts instead.
   - its code is injected into the visited web pages
   - limited access to Extensions API
   - have access to DOM API to read, modify and **add** HTML elements
-  - can ONLY used the following `chrome.*` APIs:
+  - can ONLY use the following `chrome.*` APIs:
     - `extension`
     - `i18n`
     - `runtime`
     - `storage`
-  - cannot access variables and functions defined in other scripting and content components,
-  and by web pages (where they are injected)
+  - cannot DIRECTLY access variables and functions defined in other scripting
+  and content components, and by web pages (where they are injected)
   
 **NOTE**: content scripts can use the messaging API to access all the `chrome.*` APIs
 and the variables and functions defined in other scripting components.
