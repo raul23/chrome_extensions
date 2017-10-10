@@ -175,3 +175,166 @@ communicate between each other
   messages to extension runtime; extensions can't initiate communication
 
 #### Using Long-Lived Connections
+##### Sender code (web page script)
+`chrome.runtime.connect()`: 
+- allows long-lived communication, i.e. communication last longer that using
+`chrome.runtime.sendMessage()`
+- can be called by web page scripts, content scripts, and popup scripts (also
+event scripts but rarely seen)
+- parameters:
+  - `extensionID`: ID of extension to connect to
+  - object: additional info about connection
+- returns: `port` object
+
+`port.postMessage()`: sends message to extension runtime
+
+**Example:** sender code (web page script)
+```
+var port = chrome.runtime.connect("...",{"name" : "connection1"});
+port.onMessage.addListener(function(message) {
+    console.log(message);
+});
+port.postMessage("Test message X");
+```
+
+##### Receiver code (event script)
+`chrome.runtime.onConnectExternal.addListener()`: listens the `onConnectExternal` event
+that gets fired from connection made by external web page (or extension)
+
+`chrome.runtime.onConnect.addListener()`: listens the `onConnect` event
+that gets fired from connection made from within the extension
+
+Both functions takes as parameter the received `port` object
+
+`port.onMessage.addListener()`: listens for the `onMessage` event that gets
+fired when incoming messages arrive
+
+**Example:** receiver code (event script)
+```
+chrome.runtime.onConnectExternal.addListener(function(port) {
+    //if(port.name == "connection1")
+    port.onMessage.addListener(function(message) {
+        console.log(message); //Test message X
+        port.postMessage("Test message Y");
+    });
+});
+```
+
+### Content Scripts and Event Scripts
+**Content script**:
+- has access to the following APIs:
+  - **Extension framework APIs**: `extension`, `i18n`, `runtime`, and `storage`
+  - **runtime API**: 
+    - methods: `connect()` and `sendMessage()`
+    - events: `runtime.onConnect`, `port.onMessage` and `runtime.onMessage`
+      - **NOTE:** NO access to runtime events `onMessageExternal` and `runtime.onConnectExternal` 
+  - **Standard JavaScript APIs**
+- **IMPORTANT: listens to the `message` event from the Standard JavaScript API
+to communicate with web page scripts
+
+[CSandES](CSandES) extension: injects [content_script.js](CSandES/content_script.js)
+into web pages from localhost
+
+[CSandES/content_script.js](CSandES/content_script.js):
+- once `content_script.js` get injected, it adds a `button` element to the
+visited web page
+- `buttonElement.addEventListener()` listens for the `clicked` event associated
+with the "Message Runtime" `button`
+- `chrome.runtime.sendMessage()`: sends message to the extension runtime
+(i.e. `event_script.js`)
+  - **NOTE:** no `extensionID` used as a parameter since it defaults to the currently
+  active tab (communication is within the extension)
+  
+[CSandES/event_script.js](CSandES/event_script.js):
+- `chrome.runtime.onMessage.addListener()` listens to the `onMessage` event rather than
+the `onMessageExternal` event ([from previous example](WSandES/event_script.js)) since
+communication is done within the extension (previously with WSandES it was between
+an external web page and an extension)
+- use `chrome.runtime.onConnect.addListener()` for a long-lived communication
+between the content and event scripts
+
+### Popup Scripts and Content Scripts
+**Reminder**: popup scripts and content scripts represent the extension runtime
+
+[PSandES](PSandES):
+- components
+  - **Browser-Action component**
+  - **popup component**
+  - **popup script component**
+  - **event script component**
+  
+[PSandES/popup_script.js](PSandES/popup_script.js):
+- `chrome.runtime.sendMessage(message,responseCallback)`: sends message to
+`event_script.js`
+  - `message`: message to send to `event_script.js`
+  - `responseCallback`: function used by the receiver of the sent message, i.e.
+  `event_script.js`
+  
+[PSandES/event_script.js](PSandES/event_script.js):
+- `chrome.runtime.onMessage.addListener()`: listens to the `onMessage` event
+
+## Google Chrome Extensions APIs
+**Reminder:** extensions have access to these APIs
+- **JavaScript and DOM APIs**
+- **XMLHttpRequest (XHR) APIs**
+- **HTML5 APIs**
+- **WebKit APIs**: for CSS animations, filters, etc
+- **V8 APIs**: e.g. JSON
+- **Google Chrome Extensions framework** APIs: access to features of the Chrome browser
+  - examples: `alarms`, `bookmarks`, `downloads`, `history`, `notifications`, `storage`, `tabs`
+
+Check https://developer.chrome.com/extensions/api_index for complete list of APIs
+provided by Chrome Extensions framework.
+
+### Declare Permissions
+**IMPORTANT:** your extension must declare its intent in the `permissions`
+field of the manifest which takes an array as value. The value must contain
+a string (for the name of the `chrome.*` API used such as `alarms`) or a
+match pattern (for XHR permission such as "http://*.google.com/").
+
+Example: `permissions` part of manifest
+```
+"permissions" : [
+    "alarms", //Extensions-API permission
+    "tabs", //Extensions-API permission
+    "bookmarks", //Extensions-API permission
+    "http://www.blogger.com/", //XHR permission
+    "http://*.google.com/" //XHR permission
+],
+```
+
+#### Optional Permissions
+**Two types of permissions:**
+- required permissions: requested at install time
+- optional permissions: requested at runtime
+
+### Alarms API
+`chrome.alarms` API: schedules code to run periodically or at a specified time in
+the future
+
+[AlarmsAPI/event_script.js](AlarmsAPI/event_script.js):
+- `chrome.alarms.create(alarmName,alarmInfo)` creates the alarm
+  - `alarmName`: a `string`
+  - `alarmInfo`: an `object` that describes when the alarm should fire
+  and has two properties
+    - `when` or `delayInMinutes`: initial time of alarm firing
+    - `periodInMinutes`: If set, the `onAlarm` event should fire every
+    `periodInMinutes` minutes after the initial event specified by `when`
+    or `delayInMinutes`
+  - `chrome.alarms.onAlarm.addListener()` listens for the `chrome.alarms.onAlarm`
+  event that gets fired when the alarm has elapsed 
+  - `chrome.alarms.clearAll()` clears ALL alarms
+  - use `chrome.alarms.clear(string name,function callback)` if you want to 
+  clear a specific alarm
+  
+### Bookmarks API
+`chrome.bookmarks` API: 
+- used to create, organize, and otherwise manipulate bookmarks
+- used the `bookmarks` permission
+
+Bookmarks are organized in a tree, where each node in the tree is either a 
+bookmark or a folder (sometimes called a group). Each node in the tree is 
+represented by a `bookmarks.BookmarkTreeNode` object.
+
+TODO: complete chapter 3, p.140
+

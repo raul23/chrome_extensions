@@ -4,7 +4,7 @@ var count = 0;
 var alarmName = "testAlarm";
 var alarmInfo = {
 	when : Date.now() + 6000,
-	periodInMinutes : 1 //Repeatedly fire after every 1 minute
+	periodInMinutes : 0.1 //Repeatedly fire after every 1 minute
 };
 //end-region
 
