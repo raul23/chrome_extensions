@@ -105,4 +105,4 @@ should disable the extension by clicking on the Browser-Action button.
 <br></br>
 <br></br>
 **Footnotes:**  <div>
-[1]: Well at least as long as you have the **TurnOffAutoPlay** installed.
+[1]: www.exemple.org
