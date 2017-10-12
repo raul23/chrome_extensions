@@ -25,11 +25,18 @@ to be available at the top of the page.
 1. Now can you see your favorite video without getting bothered at the end by a suggested video
 1. Enjoy!
 
-**BEFORE**  <div>
-![Before](.screenshots/screenshot-enabled.png "TurnOffAutoPlay Icon")
+**BEFORE**
 
-**AFTER**  <div>
-![Before](.screenshots/screenshot-disabled.png "TurnOffAutoPlay Icon")
+<p align="center">
+<img src=".screenshots/screenshot-enabled.png" alt="TurnOffAutoPlay enabled">
+</p>
+
+
+**AFTER**
+<p align="center">
+<img src=".screenshots/screenshot-disabled.png" alt="TurnOffAutoPlay disabled">
+</p>
+
 
 ## How to disable it
 To disable the extension:
