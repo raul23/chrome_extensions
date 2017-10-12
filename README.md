@@ -1,6 +1,6 @@
 ![TurnOffAutoPlay](TurnOffAutoPlay/icons/movie-lock-red-128.png "TurnOffAutoPlay Icon")
 # TurnOffAutoPlay extension
-**Objective:** turn off Youtube **autoplay** for ever<sup>[1](#footnote1)</sup>. Even after you clear your
+**Objective:** turn off Youtube **autoplay** for ever<sup id="a1">[1](#f1)</sup>. Even after you clear your
 browsing data, it will still be turn off.
 
 This **experimental** extension (not yet in the chrome web store) modifies the
@@ -105,4 +105,4 @@ should disable the extension by clicking on the Browser-Action button.
 <br></br>
 <br></br>
 **Footnotes:**  <div>
-<a name="footnote1">1</a>: Well at least as long as you have the **TurnOffAutoPlay** installed.
+<b id="f1">1</b>: Well at least as long as you have the **TurnOffAutoPlay** installed. [↩](#a1)
