@@ -26,10 +26,10 @@ to be available at the top of the page.
 1. Enjoy!
 
 **BEFORE**  <div>
-![Before](screenshot-enabled.png "TurnOffAutoPlay Icon")
+![Before](.screenshots/screenshot-enabled.png "TurnOffAutoPlay Icon")
 
 **AFTER**  <div>
-![Before](screenshot-disabled.png "TurnOffAutoPlay Icon")
+![Before](.screenshots/screenshot-disabled.png "TurnOffAutoPlay Icon")
 
 ## How to disable it
 To disable the extension:
