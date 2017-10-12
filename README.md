@@ -56,10 +56,3 @@ should disable the extension by clicking on the Browser-Action button.
 
 **COMPATIBILITY:**
 - Make it work with the **old youtube design**
-
-**BUGS**
-- When the extension is first installed and that we are already on a youtube page,
-the **autoplay** will be turn off (by `event.js`) but the `paper-toggle-button` button
-will not get switch to the OFF state and we will have the impression that the
-extension didn't work if the button is left in the ON state.
-  - **Tentative solution**:
