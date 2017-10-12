@@ -98,5 +98,6 @@ The **TurnOffAutoPlay** extension consists in the following components:
 display a tooltip informing us that if we want to enable the toggle again, we
 should disable the extension by clicking on the Browser-Action button.
 
-**COMPATIBILITY:**
-- Make it work with the **old youtube design**
+**TESTING:**
+- Test with the **old youtube design** and solve issues
+- Test it while in Incognito mode and solve issues
