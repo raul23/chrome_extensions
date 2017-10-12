@@ -2,7 +2,8 @@
 
 **Objective:** turn off Youtube **autoplay**
 
-The extension modifies the **PREF** cookie (**https://www.youtube.com**) to tell
+This **experimental** extension (not yet in the chrome web store) modifies the
+**PREF** cookie (from **https://www.youtube.com**) to tell
 **youtube.com** that the **autoplay** feature should be disabled.
 
 **IMPORTANT:** only tested for the moment on the new youtube design. But the
@@ -20,7 +21,7 @@ old youtube design will be supported soon (see [TODOs](#todos))
 - `manifest.json`: declares the following permissions
   - `cookies`: to get access to the `chrome.cookies` API for `event.js` to be
   able to modify the **PREF** cookie
-  - `*://*.youtube.com/*`:
+  - `*://*.youtube.com/*`
   - `management`
 
 **Calls:**
@@ -41,8 +42,11 @@ old youtube design will be supported soon (see [TODOs](#todos))
 
 
 **NOTE:** Icon attributions
-- Extension icons and Icons for the Browser-Action button: **movie-lock-{white/red}-{16/128}.png**
+- Extension icons and Icons for the Browser-Action button
 - Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+
+## Installation notes
+To inst
 
 
 ## TODOs
