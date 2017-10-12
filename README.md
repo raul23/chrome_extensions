@@ -29,7 +29,9 @@ to be available at the top of the page.
 <p align="center">
 <b>BEFORE</b>
 <br>
-<img src=".screenshots/screenshot-enabled.png" alt="TurnOffAutoPlay enabled">
+<br>
+<br>
+<img src=".screenshots/screenshot-enabled.png" title="TurnOffAutoPlay enabled" alt="TurnOffAutoPlay enabled">
 </p>
 
 <br>
@@ -37,7 +39,9 @@ to be available at the top of the page.
 <p align="center">
 <b>AFTER</b>
 <br>
-<img src=".screenshots/screenshot-disabled.png" alt="TurnOffAutoPlay disabled">
+<br>
+<br>
+<img src=".screenshots/screenshot-disabled.png" title="TurnOffAutoPlay disabled" alt="TurnOffAutoPlay disabled">
 </p>
 
 
