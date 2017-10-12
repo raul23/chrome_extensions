@@ -6,7 +6,7 @@ The extension modifies the **PREF** cookie (**https://www.youtube.com**) to tell
 **youtube.com** that the **autoplay** feature should be disabled.
 
 **IMPORTANT:** only tested for the moment on the new youtube design. But the
-old youtube design will be supported soon (see [TODOs](turn_off_autoplay#todos))
+old youtube design will be supported soon (see [TODOs](#todos))
 
 ## Code organization
 **TurnOffAutoPlay** extension consists in the following components:
