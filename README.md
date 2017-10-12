@@ -102,6 +102,7 @@ should disable the extension by clicking on the Browser-Action button.
 - Test with the **old youtube design** and solve issues
 - Test it while in Incognito mode and solve issues
 
-
+<br/>
+<br/>
 **Footnotes:**
 <a name="footnote1">1</a>: Well at least as long as you have the **TurnOffAutoPlay** installed.
