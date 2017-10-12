@@ -25,15 +25,17 @@ to be available at the top of the page.
 1. Now can you see your favorite video without getting bothered at the end by a suggested video
 1. Enjoy!
 
-**BEFORE**
-
 <p align="center">
+<b>BEFORE</b>
+<br>
 <img src=".screenshots/screenshot-enabled.png" alt="TurnOffAutoPlay enabled">
 </p>
 
-
-**AFTER**
+<br>
+<br>
 <p align="center">
+<b>AFTER</b>
+<br>
 <img src=".screenshots/screenshot-disabled.png" alt="TurnOffAutoPlay disabled">
 </p>
 
