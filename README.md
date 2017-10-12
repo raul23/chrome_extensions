@@ -60,9 +60,8 @@ A popup should get displayed asking **Remove "TurnOffAutoPlay"?**
 The **TurnOffAutoPlay** extension is in the folder [TurnOffAutoPlay](TurnOffAutoPlay)
 
 The **TurnOffAutoPlay** extension consists in the following components:
-- `event.js`: in charge of modifying the "PREF" cookie
+- `event.js`:
   - events listened to:
-    - `chrome.cookies.onChanged`
     - `chrome.management.onEnabled`
     - `chrome.runtime.onInstalled`
 - `content.js`: injects HTML code into the current youtube page to click the
@@ -72,9 +71,6 @@ The **TurnOffAutoPlay** extension consists in the following components:
   - `management`
 
 **Calls:**
-- `chrome.cookies.get`
-- `chrome.cookies.onChanged`
-- `chrome.cookies.set`
 - `chrome.management.onEnabled`
 - `chrome.runtime.onInstalled`
 
