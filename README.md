@@ -1,11 +1,9 @@
 ![TurnOffAutoPlay](TurnOffAutoPlay/icons/movie-lock-red-128.png "TurnOffAutoPlay Icon")
 # TurnOffAutoPlay extension
 **Objective:** turn off Youtube **autoplay** for ever<sup id="a1">[1](#f1)</sup>. Even after you clear your
-browsing data, it will still be turn off.
+browsing data, it will still be turned off.
 
-This **experimental** extension (not yet in the chrome web store) modifies the
-**PREF** cookie (from **https://www.youtube.com**) to turn off the **autoplay**
-feature.
+This **experimental** extension (not yet in the chrome web store) ...
 
 **IMPORTANT:** only tested for the moment on the new youtube design. But the
 old youtube design will be supported soon (see [TODOs](#todos))
@@ -67,11 +65,9 @@ The **TurnOffAutoPlay** extension consists in the following components:
     - `chrome.cookies.onChanged`
     - `chrome.management.onEnabled`
     - `chrome.runtime.onInstalled`
-- `content.js`: injects HTML code into the current youtube page to disable the
-`paper-toggle-button` button
+- `content.js`: injects HTML code into the current youtube page to click the
+`paper-toggle-button` button and disable it
 - `manifest.json`: declares the following permissions
-  - `cookies`: to get access to the `chrome.cookies` API for `event.js` to be
-  able to modify the **PREF** cookie
   - `*://*.youtube.com/*`
   - `management`
 
