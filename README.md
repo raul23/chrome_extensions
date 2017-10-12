@@ -1,16 +1,58 @@
+![TurnOffAutoPlay](TurnOffAutoPlay/icons/movie-lock-red-128.png "TurnOffAutoPlay Icon")
 # TurnOffAutoPlay extension
-
-**Objective:** turn off Youtube **autoplay**
+**Objective:** turn off Youtube **autoplay** so you are not bothered by a suggested
+video that you don't like
 
 This **experimental** extension (not yet in the chrome web store) modifies the
-**PREF** cookie (from **https://www.youtube.com**) to tell
-**youtube.com** that the **autoplay** feature should be disabled.
+**PREF** cookie (from **https://www.youtube.com**) to turn off the **autoplay**
+feature.
 
 **IMPORTANT:** only tested for the moment on the new youtube design. But the
 old youtube design will be supported soon (see [TODOs](#todos))
 
+## Installation notes
+To install this **experimental** Chrome extension:
+1. Go to `chrome://extensions/` on the Chrome browser
+1. Check the **Developer mode** box at the top. This will trigger new buttons
+to be available at the top of the page.
+1. Click on the **Load unpacked extension...** button
+1. Select the extension directory [TurnOffAutoPlay](TurnOffAutoPlay)
+1. The **TurnOffAutoPlay** extension should now be installed
+
+## How to use it
+1. Go to your favorite **Youtube** video page
+1. The **AUTOPLAY** button on the top right of the page should be disabled (grayed out)
+1. Now can you see your favorite video without getting bothered at the end by a suggested video
+1. Enjoy!
+
+**BEFORE**  <div>
+![Before](screenshot-enabled.png "TurnOffAutoPlay Icon")
+
+**AFTER**  <div>
+![Before](screenshot-disabled.png "TurnOffAutoPlay Icon")
+
+## How to disable it
+To disable the extension:
+1. Go to `chrome://extensions/` on the Chrome browser
+1. Look for the **TurnOffAutoPlay** extension and uncheck the **Enabled** box
+on the right
+1. The Extension icon should be now gray out
+
+To re-enable it, check the **Enable** box.
+
+**NOTE:** an **Enable/Disable** option will be added to the extension icon
+
+## How to remove it
+To remove the extension from Chrome:
+1. Click on the extension icon on the Chrome toolbar
+1. Choose the **Remove from Chrome...** from the context menu.
+A popup should get displayed asking **Remove "TurnOffAutoPlay"?**
+1. Choose **Remove** button
+
 ## Code organization
-**TurnOffAutoPlay** extension consists in the following components:
+The **TurnOffAutoPlay** extension is in the folder [TurnOffAutoPlay](TurnOffAutoPlay)
+
+The **TurnOffAutoPlay** extension consists in the following components:
 - `event.js`: in charge of modifying the "PREF" cookie
   - events listened to:
     - `chrome.cookies.onChanged`
@@ -44,10 +86,6 @@ old youtube design will be supported soon (see [TODOs](#todos))
 **NOTE:** Icon attributions
 - Extension icons and Icons for the Browser-Action button
 - Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-
-## Installation notes
-To inst
-
 
 ## TODOs
 **FEATURES:**
