@@ -1,0 +1,29 @@
+{
+	"manifest_version" : 2,
+	"name" : "TurnOffAutoPlay",
+	"description" : "Turns Youtube autoplay off",
+	"version" : "1.2",
+	"permissions" : [
+		"cookies",
+        "*://*.youtube.com/*",
+        "management"
+	],
+    "icons" : {
+      "16" : "icons/movie-lock-red-16.png",
+      "128" : "icons/movie-lock-red-128.png"
+    },
+    "browser_action" : {
+      "default_title" : "TurnOffAutoPlay",
+      "default_icon" : "icons/movie-lock-red-128.png"
+    },
+    "background" : {
+      "scripts" : ["event.js"],
+      "persistent" : false
+    },
+    "content_scripts" : [
+      {
+        "matches" : ["*://*.youtube.com/*"],
+        "js" : ["content.js"]
+      }
+    ]
+}
