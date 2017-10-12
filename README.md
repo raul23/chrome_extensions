@@ -1,7 +1,7 @@
 ![TurnOffAutoPlay](TurnOffAutoPlay/icons/movie-lock-red-128.png "TurnOffAutoPlay Icon")
 # TurnOffAutoPlay extension
-**Objective:** turn off Youtube **autoplay** so you are not bothered by a suggested
-video that you don't like
+**Objective:** turn off Youtube **autoplay** for ever [^1]. Even after you clear your
+browsing data, it will still be turn off.
 
 This **experimental** extension (not yet in the chrome web store) modifies the
 **PREF** cookie (from **https://www.youtube.com**) to turn off the **autoplay**
@@ -101,3 +101,5 @@ should disable the extension by clicking on the Browser-Action button.
 **TESTING:**
 - Test with the **old youtube design** and solve issues
 - Test it while in Incognito mode and solve issues
+
+[^1]: Well at least as long as you have the **TurnOffAutoPlay** installed.
