@@ -3,7 +3,8 @@
 **Objective:** turn off Youtube **autoplay** for ever<sup id="a1">[1](#f1)</sup>. Even after you clear your
 browsing data, it will still be turned off.
 
-This **experimental** extension (not yet in the chrome web store) ...
+This very simple and basic **experimental** extension was developed as a training ground for testing out the
+chrome.* APIs and to get practice using web technologies (in particular JavaScript).
 
 **IMPORTANT:** only tested for the moment on the new youtube design. But the
 old youtube design will be supported soon (see [TODOs](#todos))
@@ -23,10 +24,14 @@ to be available at the top of the page.
 1. Now can you see your favorite video without getting bothered at the end by a suggested video
 1. Enjoy!
 
+**A picture is worth a thousand words:**
+
 <p align="center">
 <b>BEFORE</b>
 <br>
-<img src=".screenshots/screenshot-enabled.png" alt="TurnOffAutoPlay enabled">
+<br>
+<br>
+<img src=".screenshots/screenshot-enabled.png" title="TurnOffAutoPlay enabled" alt="TurnOffAutoPlay enabled">
 </p>
 
 <br>
@@ -34,7 +39,9 @@ to be available at the top of the page.
 <p align="center">
 <b>AFTER</b>
 <br>
-<img src=".screenshots/screenshot-disabled.png" alt="TurnOffAutoPlay disabled">
+<br>
+<br>
+<img src=".screenshots/screenshot-disabled.png" title="TurnOffAutoPlay disabled" alt="TurnOffAutoPlay disabled">
 </p>
 
 
