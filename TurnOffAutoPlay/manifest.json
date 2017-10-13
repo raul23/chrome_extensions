@@ -2,7 +2,7 @@
 	"manifest_version" : 2,
 	"name" : "TurnOffAutoPlay",
 	"description" : "Turns Youtube autoplay off",
-	"version" : "1.2",
+	"version" : "1.0",
 	"permissions" : [
         "*://*.youtube.com/*",
         "management"
