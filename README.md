@@ -24,7 +24,7 @@ to be available at the top of the page.
 1. Now can you see your favorite video without getting bothered at the end by a suggested video
 1. Enjoy!
 
-**A picture is worth a thousand words:**
+**A picture is worth a thousand words :)**
 
 <p align="center">
 <b>BEFORE</b>
