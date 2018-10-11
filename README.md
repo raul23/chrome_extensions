@@ -1,4 +1,5 @@
-![TurnOffAutoPlay](TurnOffAutoPlay/icons/movie-lock-red-128.png "TurnOffAutoPlay Icon") <span style="font-size:larger;">TurnOffAutoPlay extension</span>
+![TurnOffAutoPlay](TurnOffAutoPlay/icons/movie-lock-red-128.png "TurnOffAutoPlay Icon") 
+# TurnOffAutoPlay extension
 **Objective:** turn off Youtube **autoplay** for ever<sup id="a1">[1](#f1)</sup>. Even after you clear your
 browsing data, it will still be turned off.
 
