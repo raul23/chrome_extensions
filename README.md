@@ -114,4 +114,4 @@ should disable the extension by clicking on the Browser-Action button.
 <br></br>
 <br></br>
 **Footnotes:**  <div>
-<b id="f1">1</b>: Well at least as long as you have the **TurnOffAutoPlay** installed. [↩](#a1)
+<b id="f1">1</b>: Well at least as long as you have the **TurnOffAutoPlay** extension installed. [↩](#a1)
