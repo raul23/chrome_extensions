@@ -2,7 +2,7 @@
 **Objective:** turn off Youtube **autoplay** for ever<sup id="a1">[1](#f1)</sup>. Even after you clear your
 browsing data, it will still be turned off.
 
-<p align="center">![TurnOffAutoPlay](TurnOffAutoPlay/icons/movie-lock-red-128.png "TurnOffAutoPlay Icon")</p>
+<p align="center"><img src="TurnOffAutoPlay/icons/movie-lock-red-128.png" alt="TurnOffAutoPlay Icon"/></p>
 
 This very simple and basic **experimental** extension was developed as a training ground for testing out the
 chrome.* APIs and to get practice using web technologies (in particular JavaScript).
