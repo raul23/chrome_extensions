@@ -10,8 +10,8 @@ chrome.* APIs and to get practice using web technologies (in particular JavaScri
 ## Installation notes
 To install this **experimental** Chrome extension:
 1. Go to `chrome://extensions/` on the Chrome browser
-1. Check the **Developer mode** box at the top. This will trigger new buttons
-to be available at the top of the page.
+1. Enable the **Developer mode** button at the top right. This will trigger new buttons
+to be available at the top left of the page.
 1. Click on the **Load unpacked extension...** button
 1. Select the extension directory [TurnOffAutoPlay](TurnOffAutoPlay)
 1. The **TurnOffAutoPlay** extension should now be installed
@@ -45,10 +45,10 @@ to be available at the top of the page.
 
 ## How to disable it
 To disable the extension:
-1. Go to `chrome://extensions/` on the Chrome browser
-1. Look for the **TurnOffAutoPlay** extension and uncheck the **Enabled** box
-on the right
-1. The Extension icon should be now gray out
+1. Click on the extension icon on the Chrome toolbar
+1. Choose the **Manage Extensions** from the context menu.
+You should be re-directed to extension's config page
+1. Click on the toggle switch to disable the extension
 
 To re-enable it, check the **Enable** box.
 
@@ -59,7 +59,7 @@ To remove the extension from Chrome:
 1. Click on the extension icon on the Chrome toolbar
 1. Choose the **Remove from Chrome...** from the context menu.
 A popup should get displayed asking **Remove "TurnOffAutoPlay"?**
-1. Choose **Remove** button
+1. Click on the **Remove** button
 
 ## Code organization
 The **TurnOffAutoPlay** extension is in the folder [TurnOffAutoPlay](TurnOffAutoPlay)
@@ -69,8 +69,7 @@ The **TurnOffAutoPlay** extension consists in the following components:
   - events listened to:
     - `chrome.management.onEnabled`
     - `chrome.runtime.onInstalled`
-- `content.js`: injects HTML code into the current youtube page to click the
-`paper-toggle-button` button and disable it
+- `content.js`: triggers the click event on the `paper-toggle-button` button and disables it
 - `manifest.json`: declares the following permissions
   - `*://*.youtube.com/*`
   - `management`
