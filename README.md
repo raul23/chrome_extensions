@@ -16,6 +16,14 @@ to be available at the top left of the page.
 1. Select the extension directory [TurnOffAutoPlay](TurnOffAutoPlay)
 1. The **TurnOffAutoPlay** extension should now be installed
 
+If you want to enable the extension also while in **Incognito mode**, then after 
+installing the extension:
+1. Click on the extension icon on the Chrome toolbar
+1. Choose the **Manage Extensions** from the context menu.
+You should be re-directed to the extension's config page
+1. Go to the **Allow in incognito** option and click on the toggle switch to 
+enable also the extension on Incognito mode
+
 ## How to use it
 1. Go to your favorite **Youtube** video page
 1. The **AUTOPLAY** button on the top right of the page should be disabled (grayed out)
