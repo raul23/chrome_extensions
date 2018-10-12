@@ -9,8 +9,8 @@ chrome.* APIs and to get practice using web technologies (in particular JavaScri
 
 ## Installation notes
 To install this **experimental** Chrome extension:
-1. Go to `chrome://extensions/` on the Chrome browser
-1. Enable the **Developer mode** button at the top right. This will trigger new buttons
+1. Go to `chrome://extensions` on the Chrome browser
+1. Click on the **Developer mode** toggle button at the top right. This will trigger new buttons
 to be available at the top left of the page.
 1. Click on the **Load unpacked extension...** button
 1. Select the extension directory [TurnOffAutoPlay](TurnOffAutoPlay)
@@ -50,7 +50,7 @@ To disable the extension:
 You should be re-directed to the extension's config page
 1. Click on the toggle switch to disable the extension
 
-To re-enable it, click again on the toggle switch from extension's config page.
+To re-enable it, click again on the toggle switch from the extension's config page.
 
 ## How to remove it
 To remove the extension from Chrome:
