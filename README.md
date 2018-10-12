@@ -22,7 +22,7 @@ installing the extension:
 1. Choose the **Manage Extensions** from the context menu.
 You should be re-directed to the extension's config page
 1. Go to the **Allow in incognito** option and click on the toggle switch to 
-enable also the extension on Incognito mode
+enable also the extension in Incognito mode
 
 ## How to use it
 1. Go to your favorite **Youtube** video page
