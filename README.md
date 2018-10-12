@@ -47,12 +47,10 @@ to be available at the top left of the page.
 To disable the extension:
 1. Click on the extension icon on the Chrome toolbar
 1. Choose the **Manage Extensions** from the context menu.
-You should be re-directed to extension's config page
+You should be re-directed to the extension's config page
 1. Click on the toggle switch to disable the extension
 
-To re-enable it, check the **Enable** box.
-
-**NOTE:** an **Enable/Disable** option will be added to the extension icon
+To re-enable it, click again on the toggle switch from extension's config page.
 
 ## How to remove it
 To remove the extension from Chrome:
@@ -98,7 +96,7 @@ The **TurnOffAutoPlay** extension consists in the following components:
   - It will enable/disable the extension
   - Indicate to the user that for the effect to take place, the page must be
   refreshed (e.g. see Ublock Origin extension)
-  - The popup should display when clicking once on the Browser-Action button
+  - The popup should display when clicking on the Browser-Action button
 - When we hover over the **AUTOPLAY** text or the disabled toggle, we should
 display a tooltip informing us that if we want to enable the toggle again, we
 should disable the extension by clicking on the Browser-Action button.
