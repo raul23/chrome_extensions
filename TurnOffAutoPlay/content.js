@@ -1,5 +1,6 @@
 var scriptName = 'content.js';
 var consoleMessage = scriptName + ': %s';
+// var toggleButtonId = 'toggle';
 var toggleButtonId = 'improved-toggle';
 
 function setToggle(){
@@ -43,9 +44,9 @@ $(document).ready(function(){
     var everythingLoaded = setInterval(function() {
         console.log(consoleMessage, 'Everything is loaded!');
         var toggleButton = document.getElementById(toggleButtonId);
-        if (toggleButton !== null) {
-            // Good for first time page loading
-            // this is the function that gets called when everything is loaded
+        if (toggleButton !== null) { // waiting until toggle button is created
+            // Good for first time WHOLE page loading
+            // This is the function that gets called when everything is loaded
             console.log(consoleMessage, 'Process `DOMContentLoaded` calling setToggle');
             setToggle();
             clearInterval(everythingLoaded);
