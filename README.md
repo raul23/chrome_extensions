@@ -7,9 +7,6 @@ browsing data, it will still be turned off.
 This very simple and basic **experimental** extension was developed as a training ground for testing out the
 chrome.* APIs and to get practice using web technologies (in particular JavaScript).
 
-**IMPORTANT:** only tested for the moment on the new youtube design. But the
-old youtube design will be supported soon (see [TODOs](#todos))
-
 ## Installation notes
 To install this **experimental** Chrome extension:
 1. Go to `chrome://extensions/` on the Chrome browser
@@ -102,14 +99,10 @@ The **TurnOffAutoPlay** extension consists in the following components:
   - It will enable/disable the extension
   - Indicate to the user that for the effect to take place, the page must be
   refreshed (e.g. see Ublock Origin extension)
-  - The popup should display when clicking once (Mac) on the Browser-Action button
+  - The popup should display when clicking once on the Browser-Action button
 - When we hover over the **AUTOPLAY** text or the disabled toggle, we should
 display a tooltip informing us that if we want to enable the toggle again, we
 should disable the extension by clicking on the Browser-Action button.
-
-**TESTING:**
-- Test with the **old youtube design** and solve issues
-- Test it while in Incognito mode and solve issues
 
 <br></br>
 <br></br>
